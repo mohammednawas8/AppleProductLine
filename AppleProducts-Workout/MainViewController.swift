@@ -11,9 +11,7 @@ class MainViewController: UIViewController, ProductSelectionDelegate {
 
     @IBOutlet var productImage: UIImageView!
     @IBOutlet var productName: UILabel!
-    
-    var image: String? = "apple_products"
-    
+        
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "Products" {
             guard let destVC = (segue.destination as? ProductsViewController) else { return }
