@@ -7,20 +7,13 @@
 
 import UIKit
 
-class ProductsViewController: UIViewController, UISheetPresentationControllerDelegate {
+class ProductsViewController: UIViewController {
     
-    // I am not sure if this is a good way of doing it
-    var productSelectionDelegate: ProductSelectionDelegate? = nil
-    
-    override var sheetPresentationController: UISheetPresentationController {
-        presentationController as! UISheetPresentationController
-    }
+    var didSelectProduct : ((String) -> Void)?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureSheet()
     }
-    
     
     @IBAction func iphoneTapped() {
         selectProduct(product: "iPhone")
@@ -34,16 +27,9 @@ class ProductsViewController: UIViewController, UISheetPresentationControllerDel
         selectProduct(product: "MacBook")
     }
     
-    func configureSheet(){
-        sheetPresentationController.delegate = self
-        sheetPresentationController.selectedDetentIdentifier = .medium
-        sheetPresentationController.prefersGrabberVisible = true
-        sheetPresentationController.detents = [
-            .medium()
-        ]
-    }
+   
     func selectProduct(product: String){
-        productSelectionDelegate?.didSelectProduct(product: product)
+        didSelectProduct?(product)
         dismiss(animated: true)
     }
     

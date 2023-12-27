@@ -7,31 +7,26 @@
 
 import UIKit
 
-class MainViewController: UIViewController, ProductSelectionDelegate {
+class MainViewController: UIViewController {
 
     @IBOutlet var productImage: UIImageView!
     @IBOutlet var productName: UILabel!
-    
-    var image: String? = "apple_products"
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "Products" {
-            guard let destVC = (segue.destination as? ProductsViewController) else { return }
-            destVC.productSelectionDelegate = self
-        }
-    }
-    
-    func didSelectProduct(product: String) {
-        productImage.image = UIImage(named: product)
-        productName.text = product
-    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 
     @IBAction func chooseProductTapped() {
-        performSegue(withIdentifier: "Products", sender: nil)
+        guard let productsVC = storyboard?.instantiateViewController(withIdentifier: "Products") as? ProductsViewController else { return }
+        productsVC.didSelectProduct = { (product) in
+            self.productImage.image = UIImage(named: product)
+            self.productName.text = product
+        }
+        if let sheet = productsVC.sheetPresentationController {
+            sheet.detents = [.medium()]
+            sheet.prefersGrabberVisible = true
+        }
+            present(productsVC, animated: true)
     }
     
 }
