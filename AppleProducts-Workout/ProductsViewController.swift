@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ProductsViewController: UIViewController, UISheetPresentationControllerDelegate {
+class ProductsViewController: UIViewController  {
     
     // I am not sure if this is a good way of doing it
     var productSelectionDelegate: ProductSelectionDelegate? = nil
@@ -35,7 +35,6 @@ class ProductsViewController: UIViewController, UISheetPresentationControllerDel
     }
     
     func configureSheet(){
-        sheetPresentationController.delegate = self
         sheetPresentationController.selectedDetentIdentifier = .medium
         sheetPresentationController.prefersGrabberVisible = true
         sheetPresentationController.detents = [
