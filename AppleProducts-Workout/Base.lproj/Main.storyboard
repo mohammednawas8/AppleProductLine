@@ -31,7 +31,7 @@
                                 <buttonConfiguration key="configuration" style="tinted" image="apple.logo" catalog="system" title="Choose Product" imagePadding="5"/>
                                 <connections>
                                     <action selector="chooseProductTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="u9Q-gX-dTL"/>
-                                    <segue destination="W8u-Yu-4Px" kind="presentation" identifier="Products" id="9Cz-9r-zs5"/>
+                                    <segue destination="W8u-Yu-4Px" kind="presentation" identifier="Products" id="QDz-b3-n7r"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="apple_products" translatesAutoresizingMaskIntoConstraints="NO" id="abJ-FO-EaB">
@@ -60,7 +60,7 @@
                     <navigationItem key="navigationItem" id="8r1-ei-pke"/>
                     <connections>
                         <outlet property="productImage" destination="abJ-FO-EaB" id="bje-0b-kWa"/>
-                        <outlet property="productName" destination="GD4-X4-tfr" id="O3b-3c-dMd"/>
+                        <outlet property="productLabel" destination="GD4-X4-tfr" id="C7S-AI-08p"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -87,6 +87,7 @@
                                         <buttonConfiguration key="configuration" style="tinted" image="iphone" catalog="system" title="iPhone" imagePadding="5"/>
                                         <connections>
                                             <action selector="iphoneTapped" destination="W8u-Yu-4Px" eventType="touchUpInside" id="vyG-Bm-cWm"/>
+                                            <segue destination="gcP-3V-G9a" kind="unwind" unwindAction="unwindToMain:" id="6Pv-TJ-aIF"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sSV-pb-7e7">
@@ -101,6 +102,7 @@
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="iPadTapped" destination="W8u-Yu-4Px" eventType="touchUpInside" id="GRa-Qd-ETd"/>
+                                            <segue destination="gcP-3V-G9a" kind="unwind" unwindAction="unwindToMain:" id="obt-hr-ztD"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qlw-np-KtZ">
@@ -115,6 +117,7 @@
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="macBookTapped" destination="W8u-Yu-4Px" eventType="touchUpInside" id="o7G-cH-LMJ"/>
+                                            <segue destination="gcP-3V-G9a" kind="unwind" unwindAction="unwindToMain:" id="11J-eR-ts3"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -132,6 +135,7 @@
                     <navigationItem key="navigationItem" id="AAk-da-n5l"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lzw-cy-7Cj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="gcP-3V-G9a" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1897" y="4"/>
         </scene>

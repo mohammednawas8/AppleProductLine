@@ -8,30 +8,37 @@
 import UIKit
 
 class ProductsViewController: UIViewController  {
-    
-    // I am not sure if this is a good way of doing it
-    var productSelectionDelegate: ProductSelectionDelegate? = nil
-    
+        
     override var sheetPresentationController: UISheetPresentationController {
         presentationController as! UISheetPresentationController
     }
+    
+    var selectedProduct: String? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
         configureSheet()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destVC = segue.destination as! MainViewController
+        if let selectedProduct {
+            destVC.image = selectedProduct
+            destVC.productName = selectedProduct
+        }
+    }
+    
     
     @IBAction func iphoneTapped() {
-        selectProduct(product: "iPhone")
+        selectedProduct = "iPhone"
     }
     
     @IBAction func iPadTapped() {
-        selectProduct(product: "iPad")
+        selectedProduct = "iPad"
     }
     
     @IBAction func macBookTapped() {
-        selectProduct(product: "MacBook")
+        selectedProduct = "MacBook"
     }
     
     func configureSheet(){
@@ -40,10 +47,6 @@ class ProductsViewController: UIViewController  {
         sheetPresentationController.detents = [
             .medium()
         ]
-    }
-    func selectProduct(product: String){
-        productSelectionDelegate?.didSelectProduct(product: product)
-        dismiss(animated: true)
     }
     
 }

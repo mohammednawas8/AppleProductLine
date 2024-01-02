@@ -10,18 +10,22 @@ import UIKit
 class MainViewController: UIViewController, ProductSelectionDelegate {
 
     @IBOutlet var productImage: UIImageView!
-    @IBOutlet var productName: UILabel!
-        
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "Products" {
-            guard let destVC = (segue.destination as? ProductsViewController) else { return }
-            destVC.productSelectionDelegate = self
+    @IBOutlet var productLabel: UILabel!
+    
+    var image = "apple_products" {
+        didSet {
+            productImage.image = UIImage(named: image)
+        }
+    }
+    var productName = "Apple Product Line" {
+        didSet {
+            productLabel.text = productName
         }
     }
     
     func didSelectProduct(product: String) {
         productImage.image = UIImage(named: product)
-        productName.text = product
+        productLabel.text = product
     }
 
     override func viewDidLoad() {
@@ -29,7 +33,11 @@ class MainViewController: UIViewController, ProductSelectionDelegate {
     }
 
     @IBAction func chooseProductTapped() {
-        performSegue(withIdentifier: "Products", sender: nil)
+        
+    }
+    
+    @IBAction func unwindToMain(_ sender: UIStoryboardSegue){
+        
     }
     
 }
