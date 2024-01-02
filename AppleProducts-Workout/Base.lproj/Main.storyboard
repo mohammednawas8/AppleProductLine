@@ -30,7 +30,6 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" image="apple.logo" catalog="system" title="Choose Product" imagePadding="5"/>
                                 <connections>
-                                    <action selector="chooseProductTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="u9Q-gX-dTL"/>
                                     <segue destination="W8u-Yu-4Px" kind="presentation" identifier="Products" id="QDz-b3-n7r"/>
                                 </connections>
                             </button>

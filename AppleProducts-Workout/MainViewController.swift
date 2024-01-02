@@ -31,10 +31,6 @@ class MainViewController: UIViewController, ProductSelectionDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
-    @IBAction func chooseProductTapped() {
-        
-    }
     
     @IBAction func unwindToMain(_ sender: UIStoryboardSegue){
         
