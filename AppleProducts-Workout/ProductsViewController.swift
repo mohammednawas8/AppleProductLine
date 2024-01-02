@@ -8,11 +8,7 @@
 import UIKit
 
 class ProductsViewController: UIViewController  {
-        
-    override var sheetPresentationController: UISheetPresentationController {
-        presentationController as! UISheetPresentationController
-    }
-    
+
     var selectedProduct: String? = nil
 
     override func viewDidLoad() {
@@ -42,9 +38,9 @@ class ProductsViewController: UIViewController  {
     }
     
     func configureSheet(){
-        sheetPresentationController.selectedDetentIdentifier = .medium
-        sheetPresentationController.prefersGrabberVisible = true
-        sheetPresentationController.detents = [
+        sheetPresentationController?.selectedDetentIdentifier = .medium
+        sheetPresentationController?.prefersGrabberVisible = true
+        sheetPresentationController?.detents = [
             .medium()
         ]
     }
