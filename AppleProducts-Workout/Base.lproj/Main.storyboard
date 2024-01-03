@@ -58,8 +58,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="8r1-ei-pke"/>
                     <connections>
-                        <outlet property="productImage" destination="abJ-FO-EaB" id="bje-0b-kWa"/>
-                        <outlet property="productName" destination="GD4-X4-tfr" id="O3b-3c-dMd"/>
+                        <outlet property="productImageView" destination="abJ-FO-EaB" id="bje-0b-kWa"/>
+                        <outlet property="productNameLabel" destination="GD4-X4-tfr" id="O3b-3c-dMd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

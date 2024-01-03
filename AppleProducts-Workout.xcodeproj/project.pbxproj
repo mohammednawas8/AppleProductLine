@@ -13,11 +13,7 @@
 		70FA1B7F2B3B180E00F71BBE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70FA1B7D2B3B180E00F71BBE /* Main.storyboard */; };
 		70FA1B812B3B181000F71BBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70FA1B802B3B181000F71BBE /* Assets.xcassets */; };
 		70FA1B842B3B181000F71BBE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70FA1B822B3B181000F71BBE /* LaunchScreen.storyboard */; };
-		70FA1B8F2B3B181000F71BBE /* AppleProducts_WorkoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FA1B8E2B3B181000F71BBE /* AppleProducts_WorkoutTests.swift */; };
-		70FA1B992B3B181000F71BBE /* AppleProducts_WorkoutUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FA1B982B3B181000F71BBE /* AppleProducts_WorkoutUITests.swift */; };
-		70FA1B9B2B3B181000F71BBE /* AppleProducts_WorkoutUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FA1B9A2B3B181000F71BBE /* AppleProducts_WorkoutUITestsLaunchTests.swift */; };
 		70FA1BA82B3B214B00F71BBE /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FA1BA72B3B214B00F71BBE /* ProductsViewController.swift */; };
-		70FA1BAC2B3C1D6600F71BBE /* ProductSelectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FA1BAB2B3C1D6600F71BBE /* ProductSelectionDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,12 +43,8 @@
 		70FA1B832B3B181000F71BBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		70FA1B852B3B181000F71BBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70FA1B8A2B3B181000F71BBE /* AppleProducts-WorkoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AppleProducts-WorkoutTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		70FA1B8E2B3B181000F71BBE /* AppleProducts_WorkoutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleProducts_WorkoutTests.swift; sourceTree = "<group>"; };
 		70FA1B942B3B181000F71BBE /* AppleProducts-WorkoutUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AppleProducts-WorkoutUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		70FA1B982B3B181000F71BBE /* AppleProducts_WorkoutUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleProducts_WorkoutUITests.swift; sourceTree = "<group>"; };
-		70FA1B9A2B3B181000F71BBE /* AppleProducts_WorkoutUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleProducts_WorkoutUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		70FA1BA72B3B214B00F71BBE /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
-		70FA1BAB2B3C1D6600F71BBE /* ProductSelectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSelectionDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,8 +76,6 @@
 			isa = PBXGroup;
 			children = (
 				70FA1B762B3B180E00F71BBE /* AppleProducts-Workout */,
-				70FA1B8D2B3B181000F71BBE /* AppleProducts-WorkoutTests */,
-				70FA1B972B3B181000F71BBE /* AppleProducts-WorkoutUITests */,
 				70FA1B752B3B180E00F71BBE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -107,30 +97,12 @@
 				70FA1B792B3B180E00F71BBE /* SceneDelegate.swift */,
 				70FA1B7B2B3B180E00F71BBE /* MainViewController.swift */,
 				70FA1BA72B3B214B00F71BBE /* ProductsViewController.swift */,
-				70FA1BAB2B3C1D6600F71BBE /* ProductSelectionDelegate.swift */,
 				70FA1B7D2B3B180E00F71BBE /* Main.storyboard */,
 				70FA1B802B3B181000F71BBE /* Assets.xcassets */,
 				70FA1B822B3B181000F71BBE /* LaunchScreen.storyboard */,
 				70FA1B852B3B181000F71BBE /* Info.plist */,
 			);
 			path = "AppleProducts-Workout";
-			sourceTree = "<group>";
-		};
-		70FA1B8D2B3B181000F71BBE /* AppleProducts-WorkoutTests */ = {
-			isa = PBXGroup;
-			children = (
-				70FA1B8E2B3B181000F71BBE /* AppleProducts_WorkoutTests.swift */,
-			);
-			path = "AppleProducts-WorkoutTests";
-			sourceTree = "<group>";
-		};
-		70FA1B972B3B181000F71BBE /* AppleProducts-WorkoutUITests */ = {
-			isa = PBXGroup;
-			children = (
-				70FA1B982B3B181000F71BBE /* AppleProducts_WorkoutUITests.swift */,
-				70FA1B9A2B3B181000F71BBE /* AppleProducts_WorkoutUITestsLaunchTests.swift */,
-			);
-			path = "AppleProducts-WorkoutUITests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,7 +237,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				70FA1B7C2B3B180E00F71BBE /* MainViewController.swift in Sources */,
-				70FA1BAC2B3C1D6600F71BBE /* ProductSelectionDelegate.swift in Sources */,
 				70FA1B782B3B180E00F71BBE /* AppDelegate.swift in Sources */,
 				70FA1BA82B3B214B00F71BBE /* ProductsViewController.swift in Sources */,
 				70FA1B7A2B3B180E00F71BBE /* SceneDelegate.swift in Sources */,
@@ -276,7 +247,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70FA1B8F2B3B181000F71BBE /* AppleProducts_WorkoutTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,8 +254,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70FA1B992B3B181000F71BBE /* AppleProducts_WorkoutUITests.swift in Sources */,
-				70FA1B9B2B3B181000F71BBE /* AppleProducts_WorkoutUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
