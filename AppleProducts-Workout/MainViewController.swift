@@ -18,10 +18,6 @@ class MainViewController: UIViewController, ProductsVCDelegate {
         guard let productsVC = storyboard?.instantiateViewController(withIdentifier: productsViewControllerIdentifier)
                 as? ProductsViewController else { return }
         productsVC.delegate = self
-        if let sheet = productsVC.sheetPresentationController {
-            sheet.detents = [.medium()]
-            sheet.prefersGrabberVisible = true
-        }
         present(productsVC, animated: true)
     }
     

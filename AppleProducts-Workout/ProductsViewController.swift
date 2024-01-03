@@ -19,6 +19,11 @@ class ProductsViewController: UIViewController {
     
     weak var delegate: ProductsVCDelegate?
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        configureSheet()
+    }
+        
     @IBAction func iphoneTapped() {
         selectProduct(product: iPhone)
     }
@@ -27,6 +32,14 @@ class ProductsViewController: UIViewController {
     }
     @IBAction func macBookTapped() {
         selectProduct(product: macBook)
+    }
+    
+    func configureSheet() {
+        if let sheetPresentationController = sheetPresentationController {
+            sheetPresentationController.prefersGrabberVisible = true
+            sheetPresentationController.selectedDetentIdentifier = .medium
+            sheetPresentationController.detents = [.medium()]
+        }
     }
     
     func selectProduct(product: String) {
